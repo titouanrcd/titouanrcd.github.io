@@ -1,0 +1,146 @@
+* { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+body { background-color: #000; color: white; font-family: 'Helvetica', sans-serif; cursor: none; overflow-x: hidden; }
+
+/* --- NAVIGATION & ACCUEIL --- */
+nav { position: absolute; bottom: 110px; right: 60px; z-index: 1000; transition: transform 0.4s ease; }
+nav.sticky { position: fixed; top: 20px; bottom: auto; right: 60px; }
+.nav-links { display: flex; list-style: none; gap: 10px; font-size: 10px; background: rgba(255, 255, 255, 0.05); padding: 8px 15px; border-radius: 40px; backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); }
+.nav-item { padding: 8px 15px; border-radius: 20px; transition: 0.3s; color: rgba(255, 255, 255, 0.4); cursor: pointer; }
+.nav-item.active { color: #fff; background: rgba(255, 255, 255, 0.1); }
+
+.section-home { height: 100vh; width: 100vw; position: relative; overflow: hidden; }
+.image-wrapper { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1; }
+.background-img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(100%) contrast(1.1); }
+.bottom-fade { position: absolute; bottom: 0; left: 0; width: 100%; height: 25vh; background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.8) 70%, #000 100%); z-index: 2; }
+.hero-text { position: absolute; left: 60px; top: 50%; transform: translateY(-50%); z-index: 50; pointer-events: none; }
+h1 { font-size: 50px; letter-spacing: 5px; font-weight: 900; }
+.subtitle { font-size: 11px; opacity: 0.6; letter-spacing: 2px; }
+.school-link { text-decoration: none; color: white !important; }
+.hero-info { margin-top: 30px; pointer-events: all; display: flex; flex-direction: column; align-items: flex-start; }
+.cta-btn { background: #fff; color: #000; border: none; padding: 14px 28px; border-radius: 50px; font-size: 11px; font-weight: 900; letter-spacing: 1px; margin-bottom: 20px; cursor: none; }
+.school-badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(255, 255, 255, 0.05); padding: 10px 18px; border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.1); font-size: 11px; backdrop-filter: blur(10px); }
+
+/* CURSEUR & EFFETS LUMIERE */
+.cursor { width: 10px; height: 10px; background: #fff; border-radius: 50%; position: fixed; pointer-events: none; z-index: 3000; mix-blend-mode: difference; transform: translate(-50%, -50%); transition: transform 0.1s; }
+.light-effect { position: absolute; top: 0; left: 0; width: 600px; height: 600px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%); pointer-events: none; mix-blend-mode: screen; transform: translate(-50%, -50%); }
+
+/* --- SECTIONS GLOBALES --- */
+.section-wide { width: 100vw; padding: 100px 5vw; background-color: #000; position: relative; z-index: 5; border-top: 1px solid rgba(255,255,255,0.05); }
+.section-title { font-size: 14px; letter-spacing: 5px; color: #fff; margin-bottom: 60px; text-transform: uppercase; font-weight: 600; }
+
+/* --- COMPÉTENCES --- */
+.no-blocks { background-color: #000; }
+.skills-layout-tech { display: flex; gap: 80px; width: 100%; }
+.tech-column, .human-column { flex: 1; display: flex; flex-direction: column; gap: 50px; }
+.cyber-heading { color: #fff; font-size: 14px; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 25px; display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+.cyber-heading i { color: #666; font-size: 16px; }
+.spec-list { list-style: none; }
+.spec-list li { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding: 15px 0; font-size: 14px; color: #ccc; transition: color 0.3s; }
+.spec-list li:hover { color: #fff; }
+.spec-detail { color: #666; font-family: monospace; font-size: 13px; text-align: right; }
+.soft-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.soft-item strong { display: block; color: #fff; font-size: 15px; margin-bottom: 8px; letter-spacing: 1px; }
+.soft-item span { color: #888; font-size: 13px; line-height: 1.5; display: block; }
+.crisis-alert { display: flex; gap: 20px; padding: 30px; border: 1px dashed #444; background: transparent; border-radius: 4px; }
+.alert-icon { font-size: 28px; color: #fff; }
+.alert-text h4 { color: #fff; margin-bottom: 10px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px; }
+.alert-text p { color: #999; font-size: 14px; line-height: 1.6; }
+.alert-text strong { color: #fff; }
+
+/* --- PROJETS --- */
+.bloc-clair { background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; position: relative; overflow: hidden; transition: transform 0.3s, border-color 0.3s; }
+.bloc-clair:hover { border-color: #555; }
+.bloc-clair h4 { color: #fff; margin-bottom: 15px; font-size: 20px; letter-spacing: 1px; }
+.bloc-clair p { color: #bbb; font-size: 14px; line-height: 1.6; }
+
+.conteneur-slider-wide { width: 100%; position: relative; }
+.slider-header { display: flex; justify-content: flex-end; margin-bottom: 20px; }
+.slider-controls { display: flex; gap: 15px; }
+.btn-slider { background: #222; border: 1px solid #444; color: #fff; width: 45px; height: 45px; border-radius: 50%; cursor: none; transition: 0.3s; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+.btn-slider:hover { background: #fff; color: #000; }
+
+.fenetre-slider-wide { width: 100%; overflow: hidden; padding-bottom: 20px; }
+.piste-slider-wide { display: flex; gap: 30px; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); }
+.carte-projet-wide { flex: 0 0 calc(33.333% - 20px); padding: 0; display: flex; flex-direction: column; }
+.image-projet { height: 250px; width: 100%; background-size: cover; background-position: center; transition: transform 0.5s ease; border-bottom: 1px solid #333; }
+.carte-projet-wide:hover .image-projet { transform: scale(1.05); }
+
+.infos-projet { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; position: relative; z-index: 2; background-color: #1a1a1a; }
+.infos-projet p { flex-grow: 1; margin-bottom: 20px; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.tags span { background: #000; color: #ddd; border: 1px solid #444; padding: 6px 14px; font-size: 11px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* --- CTF & CONTACT (THÈME SOMBRE UNIFIÉ) --- */
+
+.section-light {
+    width: 100vw;
+    background: #000; /* Fond noir uni */
+    padding-top: 100px;
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 5;
+}
+
+.wrapper-compact { width: 85%; max-width: 1000px; margin: 0 auto; }
+.text-center { text-align: center; }
+
+.section-title-light {
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: #fff; /* Passé en blanc */
+    text-transform: uppercase;
+    font-weight: 600;
+    border-bottom: 1px solid #333; /* Assombri pour coller au thème dark */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Root-Me Pilule Compacte - Passée en gris clair avec annotations adoucies */
+.rootme-pill { display: inline-flex; align-items: center; gap: 25px; background-color: #d4d4d4; padding: 15px 35px; border-radius: 50px; margin-bottom: 50px; }
+.rm-logo { height: 40px; filter: brightness(0); }
+.rm-info { display: flex; flex-direction: column; text-align: left; }
+.rm-label { font-size: 11px; color: #8c8072; text-transform: uppercase; letter-spacing: 1px; } /* Changé de #444 à un gris-brun chaud */
+.rm-value { font-size: 18px; color: #a67c52; font-weight: 900; } /* Changé de #000 à un brun foncé/bronze */
+.rm-divider { width: 1px; height: 30px; background-color: #a1968d; } /* Changé de #aaa à un gris chaud */
+
+/* Grille CTF resserrée - Cartes passées en gris clair avec Badges Bronze */
+.ctf-grid-compact { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; text-align: left; }
+.carte-ctf-light { background-color: #d4d4d4; padding: 25px; border-radius: 12px; display: flex; flex-direction: column; transition: transform 0.3s; }
+.carte-ctf-light:hover { transform: translateY(-5px); }
+.ctf-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+.ctf-top h4 { color: #000; font-size: 18px; margin: 0; font-weight: bold; }
+
+/* Badges CTF - Passés en Bronze */
+.badge-dark { background: #cd7f32; color: #3e2a16; padding: 5px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; } /* Changé de noir/blanc à bronze/brun foncé pour contraste doux */
+.badge-accent { background: #cd7f32; color: #3e2a16; padding: 5px 10px; border-radius: 20px; font-size: 11px; font-weight: bold; } /* Idem, consolidé pour être cohérent */
+
+.equipe-light { color: #222; font-size: 13px; font-weight: 600; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+.ctf-desc { color: #333; font-size: 13px; line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+.tags-light { display: flex; flex-wrap: wrap; gap: 8px; }
+.tags-light span { background: rgba(0,0,0,0.1); color: #000; border: 1px solid rgba(0,0,0,0.2); padding: 4px 10px; font-size: 10px; border-radius: 20px; text-transform: uppercase; font-weight: bold; }
+
+/* Contact Épuré */
+.section-contact-clean { padding-top: 40px; padding-bottom: 100px; background: #000; }
+.contact-title { font-size: 32px; color: #fff; margin-bottom: 30px; font-weight: 900; }
+.contact-orbs-light { display: flex; justify-content: center; gap: 20px; }
+.orb-light { width: 60px; height: 60px; border-radius: 50%; background: #d4d4d4; display: flex; align-items: center; justify-content: center; color: #000; font-size: 22px; transition: 0.3s; text-decoration: none; cursor: none; }
+.orb-light:hover { background: #fff; color: #000; transform: translateY(-5px); }
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .skills-layout-tech { flex-direction: column; gap: 60px; }
+    .carte-projet-wide { flex: 0 0 calc(50% - 15px); }
+}
+
+@media (max-width: 768px) {
+    .soft-grid { grid-template-columns: 1fr; gap: 20px; }
+    .spec-list li { flex-direction: column; align-items: flex-start; gap: 5px; }
+    .spec-detail { text-align: left; }
+    .crisis-alert { flex-direction: column; padding: 20px; }
+    .carte-projet-wide { flex: 0 0 100%; }
+    .rootme-pill { flex-direction: column; text-align: center; border-radius: 12px; padding: 25px; }
+    .rm-info { text-align: center; }
+    .rm-divider { width: 100%; height: 1px; margin: 10px 0; }
+    nav { right: 20px; bottom: 20px; }
+    .section-light { padding-top: 80px; }
+}

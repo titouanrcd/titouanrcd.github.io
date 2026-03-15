@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Romain | Cybersécurité</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="cursor"></div>
+
+    <section id="home" class="section-home">
+        <div class="hero-text">
+            <h1>TITOUAN R.</h1>
+            <p class="subtitle"> • CYBERSECURITÉ </p>
+            <div class="hero-info">
+                <button class="cta-btn" id="cta-projects">DÉCOUVRIR MES PROJETS</button>
+                <a href="https://guardia.school/" target="_blank" class="school-link">
+                    <div class="school-badge">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Étudiant à <strong>Guardia Cybersecurity School</strong></span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="image-wrapper">
+            <img src="images/PDP.jpg" alt="Romain" class="background-img">
+            <div class="bottom-fade"></div>
+            <div class="light-effect"></div>
+        </div>
+
+        <nav id="main-nav">
+            <ul class="nav-links">
+                <li class="nav-item active" data-section="home">ACCUEIL</li>
+                <li class="nav-item" data-section="competences">COMPÉTENCES</li>
+                <li class="nav-item" data-section="projets">PROJETS</li>
+                <li class="nav-item" data-section="ctf">CTF</li>
+                <li class="nav-item contact-btn" data-section="contact">CONTACT</li>
+            </ul>
+        </nav>
+    </section>
+
+    <section id="competences" class="section-wide no-blocks">
+        <h2 class="section-title">Profil & Compétences</h2>
+
+        <div class="skills-layout-tech">
+            <div class="tech-column">
+                <div class="spec-group">
+                    <h3 class="cyber-heading"><i class="fas fa-microchip"></i> Reverse Engineering & Scripting</h3>
+                    <ul class="spec-list">
+                        <li><span>Analyse Statique & Dynamique</span> <span class="spec-detail">Ghidra, Binary Ninja, GDB</span></li>
+                        <li><span>Débogage & Mémoire</span> <span class="spec-detail">x64dbg, ltrace, Cheat Engine</span></li>
+                        <li><span>Scripting</span> <span class="spec-detail">Python, Bash, PowerShell</span></li>
+                        <li><span>Automatisation & CI/CD</span> <span class="spec-detail">GitHub Actions, CI/CD</span></li>
+                    </ul>
+                </div>
+                
+                <div class="spec-group">
+                    <h3 class="cyber-heading"><i class="fas fa-network-wired"></i> Réseaux, Serveurs & BDD</h3>
+                    <ul class="spec-list">
+                        <li><span>Architecture & Simulation</span> <span class="spec-detail">GNS3, Packet Tracer</span></li>
+                        <li><span>Sécurité & Pare-feu</span> <span class="spec-detail">Stormshield, pfSense</span></li>
+                        <li><span>Virtualisation & Déploiement</span> <span class="spec-detail">VMware, Coolify</span></li>
+                        <li><span>Bases de Données</span> <span class="spec-detail">MySQL, SQLite</span></li>
+                    </ul>
+                </div>
+
+                <div class="spec-group">
+                    <h3 class="cyber-heading"><i class="fas fa-file-contract"></i> Gouvernance & Normes</h3>
+                    <ul class="spec-list">
+                        <li><span>Management de la Sécurité</span> <span class="spec-detail">ISO 27001, 27002</span></li>
+                        <li><span>Continuité & Preuves Numériques</span> <span class="spec-detail">ISO 27031, 27037</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="human-column">
+                <div class="spec-group">
+                    <h3 class="cyber-heading"><i class="fas fa-users"></i> Soft Skills & Engagements</h3>
+                    <div class="soft-grid">
+                        <div class="soft-item">
+                            <strong>Esprit d'équipe & Gestion</strong>
+                            <span>Collaboration active et coordination.</span>
+                        </div>
+                        <div class="soft-item">
+                            <strong>Esprit d'investigation</strong>
+                            <span>Curiosité technique et analyse approfondie.</span>
+                        </div>
+                        <div class="soft-item">
+                            <strong>Autonomie</strong>
+                            <span>Capacité d'apprentissage et proactivité.</span>
+                        </div>
+                        <div class="soft-item">
+                            <strong>Engagements Guardia</strong>
+                            <span>Ambassadeur et membre actif (Clubs CTF, OSINT, Réseau).</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crisis-alert">
+                    <div class="alert-icon"><i class="fas fa-bolt"></i></div>
+                    <div class="alert-text">
+                        <h4>Exercice de Gestion de Crise</h4>
+                        <p>Participation à une simulation de gestion de crise impliquant l'analyse d'une situation d'urgence, la coordination des actions et la prise de décisions rapides en équipe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="section-wide section-projets">
+        <h2 class="section-title">Projets Récents</h2>
+        
+        <div class="conteneur-slider-wide">
+            <div class="slider-header">
+                <div class="slider-controls">
+                    <button class="btn-slider btn-prec"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn-slider btn-suiv"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="fenetre-slider-wide">
+                <div class="piste-slider-wide">
+                    
+                    <article class="bloc-clair carte-projet-wide">
+                        <div class="image-projet" style="background-image: url('images/Synapse.jpg'); background-color: #111;"></div>
+                        <div class="infos-projet">
+                            <h4>ReverseShell (Synapse)</h4>
+                            <p>Synapse Console est une plateforme C2 centralisée développée pour simuler et superviser les mécanismes de sécurité. Gestion en temps réel de clients logiciels pour comprendre les systèmes de défense dans un environnement de test.</p>
+                            <div class="tags"><span>Node</span><span>Réseau</span></div>
+                        </div>
+                    </article>
+
+
+                    <article class="bloc-clair carte-projet-wide">
+                        <div class="image-projet" style="background-image: url('images/imageGestionDeCrise.png'); background-color: #111;"></div>
+                        <div class="infos-projet">
+                            <h4>Gestion de Crise</h4>
+                            <p>Participation à une simulation de gestion de crise impliquant l'analyse d'une situation d'urgence, la coordination des actions et la prise de décisions rapides en équipe.</p>
+                            <div class="tags"><span>GNS3</span><span>VirtualBox</span><span>pfSense</span><span>Squid</span></div>
+                        </div>
+                    </article>
+
+
+                    <article class="bloc-clair carte-projet-wide">
+                        <div class="image-projet" style="background-image: url('images/GNS3.jpg'); background-color: #111;"></div>
+                        <div class="infos-projet">
+                            <h4>Administration ISR</h4>
+                            <p>Simulation d'un environnement d'entreprise avec un LAN segmenté (2 VLANs), une DMZ et routage inter-VLAN. Administré par le pare-feu pfSense et le proxy Squid pour illustrer les mécanismes d'un SI résilient.</p>
+                            <div class="tags"><span>GNS3</span><span>VirtualBox</span><span>pfSense</span><span>Squid</span></div>
+                        </div>
+                    </article>
+
+                    <article class="bloc-clair carte-projet-wide">
+                        <div class="image-projet" style="background-image: url('images/image2.jpg'); background-color: #111;"></div>
+                        <div class="infos-projet">
+                            <h4>Sécurisation ISR</h4>
+                            <p>Déploiement d'une infrastructure (serveur DNS/DHCP Ubuntu, client Windows). Objectif : configuration intégrale du pare-feu Stormshield UTM pour centraliser, router et filtrer tout le trafic réseau.</p>
+                            <div class="tags"><span>StormShield</span><span>Ubuntu</span><span>Bind9</span><span>DHCP</span></div>
+                        </div>
+                    </article>
+
+                    <article class="bloc-clair carte-projet-wide">
+                        <div class="image-projet" style="background-image: url('images/viziora.jpg'); background-color: #111;"></div>
+                        <div class="infos-projet">
+                            <h4>Site Vitrine viziora.fr</h4>
+                            <p>Développement intégral de la plateforme web viziora.fr. Conception technique et intégration soignée de l'interface utilisateur.</p>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ctf" class="section-light">
+        <div class="wrapper-compact">
+            
+            <div class="text-center" style="margin-bottom: 30px;">
+                <h2 class="section-title-light">Plateformes & CTF</h2>
+            </div>
+            
+            <div class="text-center">
+                <div class="rootme-pill">
+                    <img src="https://www.root-me.org/IMG/logo/siteon0.svg" alt="Root-Me" class="rm-logo">
+                    <div class="rm-info">
+                        <span class="rm-label">Root-Me Classique</span>
+                        <strong class="rm-value">1100 points</strong>
+                    </div>
+                    <div class="rm-divider"></div>
+                    <div class="rm-info">
+                        <span class="rm-label">Root-Me PRO</span>
+                        <strong class="rm-value">6000 points</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ctf-grid-compact">
+                <article class="carte-ctf-light">
+                    <div class="ctf-top">
+                        <h4>HeroCTF 2025</h4>
+                        <span class="badge-dark"><i class="fas fa-trophy"></i> 68/2000</span>
+                    </div>
+                    <p class="equipe-light"><i class="fas fa-users"></i> Team OVAC</p>
+                    <p class="ctf-desc">Compétition nationale de cybersécurité regroupant plus de 2000 équipes.</p>
+                    <div class="tags-light">
+                        <span>Web</span><span>Reverse</span><span>Pwn</span><span>Crypto</span>
+                    </div>
+                </article>
+
+                <article class="carte-ctf-light">
+                    <div class="ctf-top">
+                        <h4>IGCTF - Guardia</h4>
+                        <span class="badge-accent"><i class="fas fa-medal"></i> 3ème</span>
+                    </div>
+                    <p class="equipe-light"><i class="fas fa-school"></i> Interne Guardia</p>
+                    <p class="ctf-desc">Compétition interne sur 2 semaines regroupant les étudiants de 1ère et 2ème année.</p>
+                    <div class="tags-light">
+                        <span>OSINT</span><span>Forensic</span><span>Stegano</span><span>Pwn</span><span>REVERSE</span><span>REVERSE</span><span>WEB</span>
+                    </div>
+                </article>
+
+                <article class="carte-ctf-light">
+                    <div class="ctf-top">
+                        <h4>GuardiHack CTF 2026</h4>
+                        <span class="badge-dark"><i class="fas fa-medal"></i> 3ème</span>
+                    </div>
+                    <p class="equipe-light"><i class="fas fa-users"></i> HexaCore</p>
+                    <p class="ctf-desc">CTF en équipe rassemblant tout les campus de Guardia (Paris, Lyon, Bordeaux) et tout les niveaux (1ere année aux 5eme année)</p>
+                    <div class="tags-light">
+                        <span>OSINT</span><span>REVERSE</span><span>STEGANO</span><span>FORENSIC</span><span>PWN</span><span>HARDWARE</span><span>WEB</span><span>ETC</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-light section-contact-clean">
+        <div class="wrapper-compact text-center">
+            <h2 class="contact-title">Prêt à collaborer ?</h2>
+            <div class="contact-orbs-light">
+                <a href="mailto:votre-email@gmail.com" class="orb-light"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/titouanrcd" target="_blank" class="orb-light"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/titouan-r-0749a0386" target="_blank" class="orb-light"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
